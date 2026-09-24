@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "ignorePatterns": [
+    ".agents/**",
+    ".specify/**",
+    "scripts/architecture/fixtures/**",
+    "**/dist/**",
+    "**/node_modules/**",
+    "coverage/**"
+  ],
+  "plugins": ["typescript"],
+  "options": {
+    "typeAware": true
+  },
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "gaze-lab",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.6.0",
+  "engines": {
+    "node": ">=24.15.0 <25"
+  },
+  "scripts": {
+    "build": "pnpm -r --if-present build",
+    "lint": "oxlint --type-aware .",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "test": "vitest run",
+    "check:boundaries": "node scripts/architecture/check-boundaries.mjs",
+    "check:privacy": "node scripts/architecture/check-privacy.mjs --root apps",
+    "format:check": "prettier --check .",
+    "verify": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm check:boundaries && pnpm check:privacy && pnpm build"
+  },
+  "devDependencies": {
+    "@babel/parser": "7.29.9",
+    "@playwright/test": "1.63.0",
+    "@types/node": "24.13.6",
+    "oxlint": "1.85.0",
+    "oxlint-tsgolint": "7.0.2002",
+    "prettier": "3.9.9",
+    "typescript": "7.0.2",
+    "vitest": "5.0.1"
+  }
+}

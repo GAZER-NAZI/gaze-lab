@@ -1,0 +1,15 @@
+node_modules/
+dist/
+build/
+coverage/
+test-results/
+playwright-report/
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+.agents/**/auth/
+.agents/**/credentials/
+.agents/**/tokens.json

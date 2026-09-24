@@ -1,0 +1,9 @@
+.agents/
+.specify/
+.git/
+node_modules/
+**/node_modules/
+**/dist/
+**/build/
+coverage/
+pnpm-lock.yaml
